@@ -5,6 +5,8 @@
 #include "contact.h"
 #include "manager.h"
 #include "report.h"
+#include "payment.h"
+#include "customer.h"
 using namespace std;
 
 int main(void){
@@ -42,6 +44,19 @@ int main(void){
     r1.displayReport();
     r2.displayReport();
     r3.displayReport();
+
+  cout << "-- Customer Details --" << endl;
+	Customer cu001 = Customer(1, "Kasun", "Chamara", "kasunchamara", "kasunchamara@gmail.com", "0769841521");
+	cu001.displayCustomer();
+
+	cout<<"-- Payment Details --"<<endl;
+	Payment pa001 = Payment(1, 700);
+	pa001.dispayPayment();
+
+	cout<<" -- Card Details-- "<<endl;
+	Card ca001 = Card(1, 700, "Kasun Chamara", "0769841521", "04/23");
+	ca001.displayCardDetails();
+   
 
 
     return 0;
