@@ -2,6 +2,9 @@
 #include <string>
 #include "admin.h"
 #include "movie.h"
+#include "contact.h"
+#include "manager.h"
+#include "report.h"
 using namespace std;
 
 int main(void){
@@ -21,6 +24,25 @@ int main(void){
     cout << "-- Comimg Soon Movie Detials --" << endl;
     ComingSoonMovie c1 = ComingSoonMovie(3, "Jurassic World Dominion", "Adventure", "Colin Trevorrow", "Colin Trevorrow,Derek Connolly,Emily Carmichael", "Sam Neill,Laura Dern,Jeff Goldblum", "2022-07-10");
     c1.displayMovieDetails();
+
+  cout<<"-- Contact Details --"<< endl;
+	Contact co001 = Contact(1, "Sadaruwan Bandara", 
+"sadaruwan@gmail.com", "0766894512", "Demo Message", &cu001);
+	co001.displayContact();
+
+  cout << "-- Manager Details -- " << endl;
+	Manager ma001 = Manager(1, "Kasun Perera", "kasun@gmail.com");
+	ma001.displayManagerDetails();
+
+  cout<< "-- Report Details--"<<endl;
+	Report r1 = Report(001,"Income Report");
+  Report r2 = Report(002, "List of Members");
+  Report r3 = Report(003, "List of Movies");
+
+    r1.displayReport();
+    r2.displayReport();
+    r3.displayReport();
+
 
     return 0;
 }
