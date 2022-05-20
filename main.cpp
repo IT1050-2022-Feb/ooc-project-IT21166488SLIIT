@@ -7,6 +7,7 @@
 #include "report.h"
 #include "payment.h"
 #include "customer.h"
+#include "ticket.h"
 using namespace std;
 
 int main(void){
@@ -57,7 +58,9 @@ int main(void){
 	Card ca001 = Card(1, 700, "Kasun Chamara", "0769841521", "04/23");
 	ca001.displayCardDetails();
    
-
+cout<<"-- Ticket Details --"<< endl;
+	Ticket ti001 = Ticket(1, 02, "09:00 AM", 700, &cu001);
+	ti001.displayTicketDetails();
 
     return 0;
 }
